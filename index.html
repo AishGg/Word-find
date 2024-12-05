@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अन्वेषणम् - Anveshanam</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgba(77, 185, 228, 0.986);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .landing-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mangalam {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .btn-start, .btn-level {
+            font-size: 1.2rem;
+            padding: 0.75rem 2rem;
+            margin: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-start:hover, .btn-level:hover {
+            transform: scale(1.05);
+        }
+        .how-to-link {
+            margin-top: 1rem;
+            color: #333;
+            text-decoration: underline;
+        }
+        .level-buttons {
+            display: none;
+        }
+    </style>
+    <script>
+        function showLevelButtons() {
+            document.getElementById('startButton').style.display = 'none';
+            document.getElementById('levelButtons').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="landing-container text-center">
+            <div class="mangalam">॥ श्रीः ॥</div>
+            <h1>अन्वेषणम् - Anveshanam</h1>
+            <p class="lead mt-4">
+                Explore the names of Krishna and Arjuna from the Bhagavad Gita through this interactive word search puzzle.
+            </p>
+            <div id="startButton" class="mt-4">
+                <button class="btn btn-primary btn-start" onclick="showLevelButtons()">Start Game</button>
+            </div>
+            <div id="levelButtons" class="level-buttons mt-4">
+                <a href="game.html?size=5&m=s" class="btn btn-success btn-level">Easy Mode</a>
+                <a href="game.html?size=7&m=s" class="btn btn-primary btn-level">Medium Mode</a>
+                <a href="game.html?size=10&m=s" class="btn btn-warning btn-level">Hard Mode</a>
+            </div>
+            <div class="mt-4">
+                <a href="howto/007-ask.html" class="how-to-link" target="_blank">How to Play?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
